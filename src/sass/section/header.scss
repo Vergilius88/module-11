@@ -1,0 +1,60 @@
+
+.header-container {
+  position: relative;
+}
+.logo {
+  font-family: $main-fonts;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3rem;
+  display: block;
+  color: white;
+}
+
+.navigation {
+  &__container {
+    position: absolute;
+    display: flex;
+    width: 99%;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-top: 22px;
+  }
+  &__list {
+    display: flex;
+    min-width: 620px;
+    justify-content: space-between;
+    text-transform: uppercase;
+  }
+  &__list-link {
+    font-family: $main-fonts;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: white;
+    &::after {
+      content: '';
+      display: block;
+      height: 3px;
+      width: auto;
+      background-color: inherit;
+      margin-top: 12px;
+      transition: all 0.2s linear;
+    }
+  }
+  &__list-link-icon {
+    fill: white;
+    width: 28px;
+    height: 18px;
+    &:hover {
+      fill:$yellow;
+    }
+  }
+
+  &__list-item:hover .navigation__list-link {
+    color:$yellow;
+    &::after {
+      background-color:$yellow;
+    }
+  }
+}

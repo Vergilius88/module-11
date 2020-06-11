@@ -1,0 +1,62 @@
+.background {
+  background-image: linear-gradient(
+      0deg,
+      rgba(252, 227, 138, 0.9) 0%,
+      rgba(243, 129, 129, 0.9) 100%
+    ),
+    url(../images/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  @media (min-resolution: 192dpi) {
+    background-image: linear-gradient(
+        0deg,
+        rgba(252, 227, 138, 0.9) 0%,
+        rgba(243, 129, 129, 0.9) 100%
+      ),
+      url(../images/background@2x.jpg);
+}
+}
+
+.hero {
+  padding-top: 180px;
+  padding-bottom: 225px;
+  margin-bottom: 50px;
+  color: white;
+  &__title {
+    font-family: $title-fonts;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 7.2rem;
+    margin-bottom: 80px;
+    text-align: center;
+     &--different-style {
+    font-family: $main-fonts;
+    font-style: normal;
+    font-weight: 700;
+    display: block;
+    font-size: 15rem;
+    text-transform: uppercase;
+    line-height: 17rem;
+  }
+  }
+  &__link {
+    font-family: $main-fonts;
+    font-style: normal;
+    font-weight: 700;
+    display: block;
+    font-size: 1.4rem;
+    border: 3px solid;
+    border-color: white;
+    padding: 9px 0;
+    max-width: 156px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 auto;
+    transition: all 0.2s linear;
+    color: white;
+    &:hover {
+      transform: scale(1.2, 1.2);
+    }
+  }
+ 
+}

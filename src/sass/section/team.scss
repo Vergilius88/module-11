@@ -1,0 +1,144 @@
+.team {
+  &::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(229, 229, 229);
+    margin-top: 80px;
+  }
+  &__title {
+    font-family: $title-fonts;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2.4rem;
+    text-align: center;
+    color: $secondary-fonts-color;
+    &--different-style {
+      font-family: $main-fonts;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 3rem;
+      display: block;
+      line-height: 6.3rem;
+      text-transform: uppercase;
+    }
+    &::after {
+      content: '';
+      display: block;
+      height: 3px;
+      width: 60px;
+      background-color: $red;
+      margin: 20px auto 45px;
+    }
+  }
+  &__paragraph {
+    font-family: $secondary-fonts;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: $main-fonts-color;
+    width: 80%;
+    line-height: 2rem;
+    margin: 0 auto;
+    margin-bottom: 92px;
+    text-align: center;
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__item {
+    position: relative;
+    text-align: center;
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      background-color: $blue;
+      width: 380px;
+      height: 470px;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+    &:hover .team__wrapper-overlay {
+      visibility: visible;
+      opacity: 1;
+    }
+    &:hover .team__photo-wrapper {
+      transform: translate(-10px, -10px);
+    }
+  }
+  &__item-name {
+    font-family: $main-fonts;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    color:$secondary-fonts-color;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  &__item-profession {
+    font-family: $secondary-fonts;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.5rem;
+    color: $main-fonts-color;
+  }
+  &__photo-wrapper {
+    display: inline-block;
+    margin-bottom: 28px;
+    position: relative;
+    transition: all 0.2s linear;
+    top: 0;
+    left: 0;
+  }
+  &__wrapper-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+      90deg,
+      rgba(252, 227, 138, 0.9) 0%,
+      rgba(243, 129, 129, 0.9) 100%
+    );
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.2s linear;
+  }
+  &__wrapper-social-network {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:$yellow;
+    transition: all 0.2s linear;
+    &:nth-child(-n + 3) {
+      border-right: solid 1px;
+      border-color: $red;
+    }
+    &:hover {
+      background-color: $red;
+    }
+    &:hover .team__social-network-icon {
+      fill: white;
+    }
+  }
+  &__block-social-network {
+    display: flex;
+    min-width: 224px;
+  }
+  &__social-network-icon {
+    width: 26px;
+    height: 26px;
+    fill: $red;
+  }
+}
